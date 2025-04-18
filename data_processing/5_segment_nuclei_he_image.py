@@ -97,9 +97,10 @@ def run_hovernet(dir_hovernet, gpu_id, dir_crops, dir_out_hovernet):
         test_command = (
             "python run_infer.py --gpu="
             "%d"
-            " --nr_types=0 --batch_size=64 --model_mode=original --model_path=hovernet_original_consep_notype_tf2pytorch.tar --nr_inference_workers=1 --nr_post_proc_workers=8 tile --input_dir=%s --output_dir=%s --mem_usage=0.1"
+            " --nr_types=0 --batch_size=64 --model_mode=original --model_path=/home/ian/Code/hover_net/pretrained/hovernet_original_consep_type_tf2pytorch.tar --nr_inference_workers=1 --nr_post_proc_workers=8 tile --input_dir=%s --output_dir=%s --mem_usage=0.1"
             % (gpu_id, dir_crops_temp, dir_out_hovernet_crop)
         )
+        
 
         os.system(test_command)
 
